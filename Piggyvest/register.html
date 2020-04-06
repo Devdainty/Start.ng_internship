@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US" >
+    <head>
+        <meta charset="utf-8">
+        <title>Piggyvest | Dashboard</title>
+        <meta name="description" content="piggyvest/">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="image/favicon-piggyvest.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css" />
+        <style>
+            body, html {
+                background-color: #062863;
+                font-family: 'karia', sans-serif;
+                color: #4a5568;
+            }
+            .container {
+                background: #fff;
+                margin: 2em auto;
+                width: 30%;
+                border-radius: 20px 20px 20px 0px ;
+            }
+            form {
+                padding: 20px 10% 10% 10%;
+            }
+            .form-control {
+                height:6vh;
+                width: 100%;
+                padding-left: 20px;
+                border-radius: 5px;
+                border: 1px solid #edf2f7;
+                background: #edf2f7;
+                margin-bottom: 2rem;
+                margin-top: 5px;
+            }
+            .firstText p {
+                font-size: 14px;
+                line-height: 24px;
+            }
+            .firstText h2 {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 36px;
+            } 
+            .firstText{
+                padding-top: 5%;
+                text-align: center;
+            }
+            label{
+                font-weight: 700;
+                line-height: 39px;
+                font-size: 12px;
+            }
+            button {
+                background: #083e9e;
+                width: 100%;
+                height: 6vh;
+                color: #fff;
+                border: none;
+                border-radius: 6px 6px 6px 0px;
+                font-weight: bolder;
+                font-size: 16px;
+                transition: all 0.5s ease-in-out;
+                }
+                button:hover {
+                    background: #062863;
+                }
+            .link{
+                color: #fff;
+                text-align: center;
+                margin: 2em auto;
+                justify-content: center;
+                align-content: center;
+                display: flex;
+                text-decoration: none;
+                margin-bottom: 0px;
+            }
+            a:hover {
+                color: wheat ;
+            }
+            img{
+                margin: 3em auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body> 
+        <a href="https://www.piggyvest.com/">
+        <img src="https://res.cloudinary.com/dndhtryrj/image/upload/v1586026857/piggyvest-logo.0b78a8fa_1_upcmio.svg">
+    </a>
+        <div class="container">
+            <div class="firstText">
+                <h2 style="color: #083E9E;">Create a Secure Account</h2>
+            <p>Welcome to the future of Savings & Investments</p>
+            </div>
+            
+            <form action="" method="">
+                <div class="form-group">
+                    <P>
+                        <label for="Fullname">
+                            Full Name<br>
+                            <input type="text" id="fullname" class="form-control" name="user_name" placeholder="Full Name" />
+                        </label>
+                    </P>
+                    <p>
+                        <label for="Email">
+                            Email Address<br>
+                            <input type="email" id="email" class="form-control" name="user_mail" placeholder="Email Address" />
+                        </label>
+                    </p>
+                    <p>
+                        <label for="phonenumber">
+                            Phone Number<br>
+                            <input type="text" id="phonenumber" class="form-control" name="user_phone_number" placeholder="Phone Number" />
+                        </label>
+                    </p>
+                    <p>
+                        <label for="pwd">
+                            Password<br>
+                            <input type="password" id="pwd" class="form-control" name="password" placeholder="Password"/>
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <label for="referrer">
+                            Referrer Phone or Promo Code (Optional)<br>
+                            <input type="text" id="referrer" class="form-control" name="user_referrer" placeholder="Referrer Phone or Promo Code" />
+                        </label>
+                    </p>
+                    <p>
+                        <label for="about_us">
+                            How Did You Hear About Us? (Optional)<br>
+                            <input type="text" id="about_us" class="form-control" name="How_did_you_hear_aboutus" placeholder="Click to select" list="mysuggestion" />
+                            <datalist id="mysuggestion">
+                                <option>Click to select</option>
+                                <option>Facebook</option>
+                                <option>Twitter</option>
+                                <option>Instagram</option>
+                                <option>Friend/Family/Coworker Referral</option>
+                                <option>Google Search</option>
+                                <option>Google Playstore</option>
+                                <option>Online Blog</option>
+                            </datalist>
+                        </label>
+                    </p>
+                    <button type="submit" value="Send">Create Account</button>
+                </form>
+            </div>
+                </div>
+                
+        <a class="link" href="https://dashboard.piggyvest.com/login">Already have an account? Log In</a>
+    </body>
+</html>
