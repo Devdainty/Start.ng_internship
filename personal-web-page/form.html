@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Validation Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            /*
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            div {
+                margin-bottom: 30px;
+            }
+            fieldset {
+                border: 0;
+                padding: 30px;
+            }
+            label {
+                font-size: 20px;
+            }
+            input,
+            textarea {
+                border: 0;
+                border-bottom: 1px solid gray;
+                padding: 10px 0;
+                width: 200px;
+            }*/
+                @font-face {
+                    font-family: Ubuntu-Bold;
+                    src: url('fonts/ubuntu/Ubuntu-Bold.ttf'); 
+                }
+                * {
+                    margin: 0px; 
+                    padding: 0px; 
+                    box-sizing: border-box;
+                }
+                body, html {
+                    height: 100%;
+                    font-family: Ubuntu-Bold, sans-serif;
+                }
+                input {
+                    outline: none;
+                    border: none;
+                }
+                input[type="number"] {
+                    -moz-appearance: textfield;
+                    appearance: none;
+                    -webkit-appearance: none;
+                }
+
+                input[type="number"]::-webkit-outer-spin-button,
+                input[type="number"]::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+
+                textarea {
+                    outline: none;
+                    border-bottom:2px solid black;
+                }
+
+                textarea:focus, input:focus {
+                    border-color: transparent !important;
+                }
+
+                input::-webkit-input-placeholder { color: #f0540c;}
+                input:-moz-placeholder { color: #bdbdd3;}
+                input::-moz-placeholder { color: #bdbdd3;}
+                input:-ms-input-placeholder { color: #bdbdd3;}
+
+                textarea::-webkit-input-placeholder { color: #f0540c;}
+                textarea:-moz-placeholder { color: #bdbdd3;}
+                textarea::-moz-placeholder { color: #bdbdd3;}
+                textarea:-ms-input-placeholder { color: #bdbdd3;}
+
+                button {
+                    outline: none !important;
+                    border: none;
+                    background: transparent;
+                }
+
+                button:hover {
+                cursor: pointer;
+                }
+                .container {
+                    max-width: 1200px;
+                }
+            .container-contact {
+                width: 100%;  
+                min-height: 100vh;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                position: relative;
+                background-color: #f2f2f2;
+            }
+
+            .form-cover {
+                width: 550px;
+                background: transparent;
+                padding: 50px 0px 160px 0px;
+            }
+            form {
+            width: 100%;
+            }
+            .title {
+                display: block;
+                font-family: Ubuntu-Bold;
+                font-size: 30px;
+                color: #403866;
+                line-height: 1.2;
+                text-transform: uppercase;
+                text-align: center;
+                padding-bottom: 49px;
+            }
+            .input-cover {
+                width: 100%;
+                background-color: #fff;
+                border-radius: 31px;
+                margin-bottom: 16px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .type {
+                position: relative;
+                display: block;
+                width: 100%;
+                background: #fff;
+                border-radius: 31px;
+                font-family: Ubuntu-Bold;
+                font-size: 18px;
+                color: #8f8fa1;
+                line-height: 1.2;
+            }
+            input.type {
+                height: 62px;
+                padding: 0 35px 0 35px;
+            }
+
+
+            textarea.type {
+                min-height: 169px;
+                padding: 19px 35px 0 35px;
+            }
+            .form-btn-cover {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding-top: 10px;
+            }
+            .form-btn {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 20px;
+                min-width: 150px;
+                height: 62px;
+                background-color: transparent;
+                border-radius: 31px;
+
+                font-family: Ubuntu-Bold;
+                font-size: 16px;
+                color: #fff;
+                line-height: 1.2;
+                text-transform: uppercase;
+
+                -webkit-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                transition: all 0.4s;
+                position: relative;
+                z-index: 1;
+            }
+            .form-btn::before {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+                transform: translateX(-50%);
+                border-radius: 31px;
+                background-color: #827ffe;
+                pointer-events: none;
+    
+                -webkit-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                transition: all 0.4s;
+            }
+            .form-btn:hover:before {
+                background-color: #403866;
+                width: calc(100% + 20px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-contact">
+            <div class="form-cover">
+                <form action="" method="POST">
+                    <span class="title">
+                        Contact Me
+                    </span>
+                    <div class="container">
+                        <div class="input-cover">
+                            <input class="type"type="text" name="firstname" id="first_name" placeholder="Your First Name" required />
+                        </div>
+                        <div class="input-cover">
+                            <input class="type" type="text" name="lastname" id="last_name" placeholder="Your Last Name" required />
+                        </div>
+                        <div class="input-cover">
+                            <input class="type" type="text" id="phone" name="phone_number" placeholder="Phone" required />
+                        </div>
+                        <div class="textarea-input">
+                            <textarea class="type" name="message" placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="form-btn-cover">
+                            <button class="form-btn">
+                                <span>
+                                    <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                                    Send
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+    </body>
+</html>
