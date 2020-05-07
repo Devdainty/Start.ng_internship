@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="us-EN">
+  <head>
+    <title>Micky's Quiz Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <h2>Micky's Quiz Game</h2>
+    </nav>
+    <header>
+        <div class="intro-Text">
+          <h3> Welcome to Micky's Quiz Game</h3>
+          <p>Correct answers shows green color while wrong answers show red color.</p>
+        </div>    
+    </header>
+    <div id="quiz_page">
+      <button onclick="clickMe()" id="incipere">Start</button>
+      <div id="show_answer"></div>
+  
+      <div class="level"></div>
+        <div id="plus" class="plus">
+          <small><span id="question_count"></span></small>
+      <br><br>
+            <form action="">
+              <div class="form_group">
+                <label for="" id="questions"> <span id="question_box"></span></label>
+                <div for="" class="optionz"></div>
+              </div>
+            </form>
+        </div>
+        <br>
+        <div class="Button">
+          <button onClick="clickMe()" class="show_result" id="show_next">Next Question</button>
+          <button onClick="show_result()" class="show_result" id="show_result" style="background-color: darkslateblue;">Result</button>
+  
+        </div>
+    </div>
+    <div class="area"></div>
+  
+    <script src="script.js"></script>
+  </body>
+</html>
